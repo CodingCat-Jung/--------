@@ -19,7 +19,7 @@ sort_list = [None] * num
 # 각 사람을 그들이 기억하는 대로 줄을 세운다.
 for i in range(num):
     left_taller_count = people[i]  # i번째 사람보다 큰 사람이 왼쪽에 몇 명 있었는지
-    position = 0
+    # position = 0
 
     # 줄을 돌면서 사람을 배치할 빈 자리를 찾는다
     for j in range(num):
