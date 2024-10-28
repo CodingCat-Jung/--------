@@ -36,3 +36,4 @@ for i in range(3, n + 1):
 
 # 결과 출력
 print(dp[n])
+
