@@ -14,7 +14,6 @@ def fibonacci(n):
     # 반복문을 통해 2부터 n까지의 피보나치 수를 계산
     for i in range(2, n + 1):
 
-        # 현재 값은 이전 두 값의 합
         dp[i] = dp[i - 1] + dp[i - 2]
 
     # n번째 피보나치 수를 반환
