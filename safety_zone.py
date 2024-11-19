@@ -5,6 +5,7 @@ from collections import deque
 def find_safe_areas(N, height_map):
 
     # 특정 지점 (x, y)에서 시작하여 연결된 안전한 영역을 탐색
+    # 탐색을 완료한 후, 연결된 안전 영역을 visited 배열에 기록
     def bfs(x, y, visited, rain_height):
         queue = deque([(x, y)])
         visited[x][y] = True
@@ -22,6 +23,7 @@ def find_safe_areas(N, height_map):
                 if 0 <= nx < N and 0 <= ny < N and not visited[nx][ny] and height_map[nx][ny] > rain_height:
                     visited[nx][ny] = True
                     queue.append((nx, ny))
+    
     
     max_safe_areas = 0 # 안전한 영역의 최대 개수를 저장할 변수
     max_height = max(map(max, height_map)) # 지도에서 가장 높은 높이를 찾음
